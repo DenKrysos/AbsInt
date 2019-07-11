@@ -6,7 +6,7 @@ Bedient sich SDN-Verfahren. Benötigt Open vSwitch (OVS)
 
 Argumente:
 
-# absint cut <device>
+\# absint cut <device>
 # absint establish <device>
 # absint useports {Devices}
 # absint netman adhoc [start | stop | set]
