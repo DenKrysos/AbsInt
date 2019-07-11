@@ -7,24 +7,23 @@ Bedient sich SDN-Verfahren. Benötigt Open vSwitch (OVS)
 Argumente:
 
 \# absint cut <device>
-# absint establish <device>
-# absint useports {Devices}
-# absint netman adhoc [start | stop | set]
-# absint netman adhoc set [freq | chan | essid]
-# absint debug <einzelne Teilfunktionen>
-# absint auto [controller | autonom]
-# absint auto <Decision-Mode> -||<[Inter-AI-Connection-Mode][Connection-Address-Source]>||
-# absint auto <Decision-Mode>-||Optionenk wlandevs {WLANPorts} -||Optionen||
+\# absint establish <device>
+\# absint useports {Devices}
+\# absint netman adhoc [start | stop | set]
+\# absint netman adhoc set [freq | chan | essid]
+\# absint debug <einzelne Teilfunktionen>
+\# absint auto [controller | autonom]
+\# absint auto <Decision-Mode> -||<[Inter-AI-Connection-Mode][Connection-Address-Source]>||
+\# absint auto <Decision-Mode>-||Optionenk wlandevs {WLANPorts} -||Optionen||
+
 • Inter-AI-Connection-Mode: [cfg | auto | server | client]
 Default, wenn ausgelassen: [cfg]
-→ Zur Kommunikation zwischen zwei AIs wird eine direkte Socket Verbindung aufgebaut.
-Diese Option gibt an, ob das startende AI für diese Verbindung der akzeptierende
-Server oder der verbindungsanfragende Klient sein soll, bzw. von welcher Stelle diese
-Information bezogen werden soll.
+→ Zur Kommunikation zwischen zwei AIs wird eine direkte Socket Verbindung aufgebaut. Diese Option gibt an, ob das startende AI für diese Verbindung der akzeptierende Server oder der verbindungsanfragende Klient sein soll, bzw. von welcher Stelle diese Information bezogen werden soll.
 cfg - Der Wert wird beim Start aus dem Conﬁg-File gelesen.
 auto - Beteiligte AIs versuchen eigenständig eines zum Server zu bestimmen. Die Verbliebenen / das Verbleibende agiert als Klient.
 server - Das AI erwartet andere AIs, die eine Verbindung aufzunehmen ersuchen.
 client - Das AI versucht sich mit einem aktiven Server zu verbinden.
+
 • Connection-Address-Source: [cfg | auto | cmdline]
 Default, wenn ausgelassen: [cfg]
 → Diese Option kann nur gemeinsam mit und direkt anschließend an [Inter-AI-Connection-Mode] übergeben werden und ist in ihrer Bedeutung von dessen Wert abhängig.
